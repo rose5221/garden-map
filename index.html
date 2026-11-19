@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>园林史 · 地图复习 | 苏科大 344</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- 地图：铺满全屏 -->
+  <canvas id="map"></canvas>
+  <canvas id="fx"></canvas>
+  <div id="pins"></div>
+
+  <!-- 左下角坐标 -->
+  <div id="hud">
+    <div id="hudPlace">—</div>
+    <div id="hudMeta">—</div>
+  </div>
+
+  <!-- 顶栏 -->
+  <header id="top">
+    <div class="brand">
+      <span class="mark">園</span>
+      <div class="ttl">
+        <b>园林史 · 地图复习</b>
+        <small>46 站 · 197 知识点 · 中国 × 西方</small>
+      </div>
+    </div>
+    <div class="topTools">
+      <div class="zoomBtns">
+        <button id="zIn" title="放大">＋</button>
+        <button id="zOut" title="缩小">−</button>
+        <button id="zAll" title="全图">全图</button>
+        <button id="zCn" title="聚焦中国">中国</button>
+        <button id="zWe" title="聚焦西方">西方</button>
+      </div>
+      <button id="btnSearch" class="ico" title="搜索（/）">⌕</button>
+      <button id="btnList" class="ico wide">目录</button>
+    </div>
+  </header>
+
+  <!-- 左侧：当前站信息浮层 -->
+  <aside id="card" class="hidden">
+    <button id="cardClose" class="x">×</button>
+    <div id="cardBody"></div>
+  </aside>
+
+  <!-- 右侧：站点目录 -->
+  <aside id="list" class="hidden">
+    <button id="listClose" class="x">×</button>
+    <div class="listHead">
+      <h2>全部 46 站</h2>
+      <div class="listFilter">
+        <button data-f="all" class="on">全部</button>
+        <button data-f="cn">中国</button>
+        <button data-f="we">西方</button>
+      </div>
+    </div>
+    <div id="listBody"></div>
+  </aside>
+
+  <!-- 底部：进度条 + 上一站/下一站 -->
+  <footer id="bottom">
+    <button id="prev">← 上一站</button>
+    <div class="track">
+      <div id="prog"></div>
+      <span id="pos">01 / 46</span>
+    </div>
+    <button id="next" class="primary">下一站 →</button>
+  </footer>
+
+  <!-- 搜索 -->
+  <div id="searchBox" class="hidden">
+    <input id="searchInput" placeholder="搜园林 / 人物 / 年代 / 术语…" autocomplete="off">
+    <div id="searchResults"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
