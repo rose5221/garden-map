@@ -275,7 +275,7 @@ function renderCard(s) {
   <p class="lead">${esc(s.lead)}</p>`;
 
   if (s.img) {
-    h += `<img class="planImg" src="assets/plans/${s.img}.webp" alt="${esc(s.t)}" loading="lazy">
+    h += `<img class="planImg" src="assets/plans/${s.img}.webp?v=2" alt="${esc(s.t)}" loading="lazy">
           <div class="planCap">平面图 · 裁自教材 · 点击放大</div>`;
   }
 
